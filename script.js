@@ -33,3 +33,11 @@ console.log(calculateCircumference(5));
 // console.log(searchString(“s”, “mississippi”)); // will output 4
 // console.log(searchString(“q”, “mississippi”)); // will output 0
 
+function searchString(char, str)
+{
+    const matches = str.match(new RegExp(char, "g")) || [];
+    return matches.length;
+}
+
+console.log(searchString("s", "mississippi"));
+console.log(searchString("q", "mississippi"));
